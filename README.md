@@ -100,15 +100,3 @@ Upload `sample_doc.txt` in the UI and test the following prompts:
 
 ---
 
-## ☁️ Deployment Guide
-
-### Deploying Backend (FastAPI)
-- **Render / Railway / Fly.io:**
-  - Build Command: `pip install -r requirements.txt`
-  - Start Command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-  - Set Environment Variable: `GROQ_API_KEY`
-
-### Deploying Frontend (Static Web Hosting)
-- **Vercel / Netlify / GitHub Pages:**
-  - Deploy the `frontend/` folder directly.
-  - Update `BACKEND_URL` in `frontend/script.js` to point to your live deployed backend URL (e.g. `https://your-rag-backend.onrender.com`).
