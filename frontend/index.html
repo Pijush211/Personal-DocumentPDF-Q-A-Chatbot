@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Q&A Chatbot (RAG + Groq)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>⚙️ Settings</h2>
+            
+            <div class="form-group">
+                <label for="apiKey">Groq API Key:</label>
+                <input type="password" id="apiKey" placeholder="gsk_..." />
+            </div>
+
+            <div class="form-group">
+                <label for="modelSelect">Select Groq Model:</label>
+                <select id="modelSelect">
+                    <option value="llama-3.3-70b-versatile" selected>Llama 3.3 70B Versatile</option>
+                    <option value="llama-3.1-8b-instant">Llama 3.1 8B Instant</option>
+                    <option value="mixtral-8x7b-32768">Mixtral 8x7b</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <h2>📄 Document Upload</h2>
+            <div class="form-group">
+                <input type="file" id="fileInput" accept=".pdf,.txt" />
+            </div>
+
+            <button id="uploadBtn" class="primary-btn">🚀 Upload & Index</button>
+            <div id="uploadStatus" class="status-msg"></div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <header class="chat-header">
+                <h1>📚 Personal Document Q&A Chatbot</h1>
+                <p>Decoupled Architecture: FastAPI Backend + Pure JS Frontend</p>
+                <div id="docBanner" class="doc-banner hidden"></div>
+            </header>
+
+            <div id="chatMessages" class="chat-messages">
+                <div class="message assistant-msg">
+                    👋 Welcome! Upload a PDF or TXT file on the sidebar to start asking questions.
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="userInput" placeholder="Ask a question about your document..." disabled />
+                <button id="sendBtn" class="send-btn" disabled>Send</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
