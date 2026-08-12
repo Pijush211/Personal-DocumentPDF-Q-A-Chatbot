@@ -1,4 +1,5 @@
-const BACKEND_URL = "http://127.0.0.1:8000";
+//const BACKEND_URL = "http://127.0.0.1:8000";
+const BACKEND_URL = "https://pdf-qa-rag-backend.onrender.com";
 
 const uploadBtn = document.getElementById("uploadBtn");
 const fileInput = document.getElementById("fileInput");
